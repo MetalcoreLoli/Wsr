@@ -1,0 +1,9 @@
+C:\Users\Magical.Cake\source\repos\Libs\Libs\bin\Debug\netstandard2.0\VIN_LIB.deps.json
+C:\Users\Magical.Cake\source\repos\Libs\Libs\bin\Debug\netstandard2.0\VIN_LIB.dll
+C:\Users\Magical.Cake\source\repos\Libs\Libs\bin\Debug\netstandard2.0\VIN_LIB.pdb
+C:\Users\Magical.Cake\source\repos\Libs\Libs\obj\Debug\netstandard2.0\VIN_LIB.csprojAssemblyReference.cache
+C:\Users\Magical.Cake\source\repos\Libs\Libs\obj\Debug\netstandard2.0\VIN_LIB.AssemblyInfoInputs.cache
+C:\Users\Magical.Cake\source\repos\Libs\Libs\obj\Debug\netstandard2.0\VIN_LIB.AssemblyInfo.cs
+C:\Users\Magical.Cake\source\repos\Libs\Libs\obj\Debug\netstandard2.0\VIN_LIB.csproj.CoreCompileInputs.cache
+C:\Users\Magical.Cake\source\repos\Libs\Libs\obj\Debug\netstandard2.0\VIN_LIB.dll
+C:\Users\Magical.Cake\source\repos\Libs\Libs\obj\Debug\netstandard2.0\VIN_LIB.pdb

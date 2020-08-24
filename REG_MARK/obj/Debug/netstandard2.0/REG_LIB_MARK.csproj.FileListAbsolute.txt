@@ -1,0 +1,9 @@
+C:\Users\Magical.Cake\source\repos\Libs\REG_MARK\bin\Debug\netstandard2.0\REG_LIB_MARK.deps.json
+C:\Users\Magical.Cake\source\repos\Libs\REG_MARK\bin\Debug\netstandard2.0\REG_LIB_MARK.dll
+C:\Users\Magical.Cake\source\repos\Libs\REG_MARK\bin\Debug\netstandard2.0\REG_LIB_MARK.pdb
+C:\Users\Magical.Cake\source\repos\Libs\REG_MARK\obj\Debug\netstandard2.0\REG_LIB_MARK.csprojAssemblyReference.cache
+C:\Users\Magical.Cake\source\repos\Libs\REG_MARK\obj\Debug\netstandard2.0\REG_LIB_MARK.AssemblyInfoInputs.cache
+C:\Users\Magical.Cake\source\repos\Libs\REG_MARK\obj\Debug\netstandard2.0\REG_LIB_MARK.AssemblyInfo.cs
+C:\Users\Magical.Cake\source\repos\Libs\REG_MARK\obj\Debug\netstandard2.0\REG_LIB_MARK.csproj.CoreCompileInputs.cache
+C:\Users\Magical.Cake\source\repos\Libs\REG_MARK\obj\Debug\netstandard2.0\REG_LIB_MARK.dll
+C:\Users\Magical.Cake\source\repos\Libs\REG_MARK\obj\Debug\netstandard2.0\REG_LIB_MARK.pdb

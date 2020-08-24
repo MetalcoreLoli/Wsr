@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "+EYcU3p37R+H//9wqWvgytMwQfg4aJx5Wh47V9Rb23uvtHiBzEs2NZnU2o/cazLZB0dTvQTpPsYBqZttbUhmcQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Magical.Cake\\source\\repos\\Libs\\Libs\\VIN_LIB.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Magical.Cake\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Magical.Cake\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
