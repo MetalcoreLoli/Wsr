@@ -94,8 +94,8 @@ namespace VIN_LIB
                 new MyRange('A', 'H'), 
                 new List<Country> 
                 {
-                    new Country("Египет", 'D', new MyRange('A', 'E')),
-                    new Country("Марокко", 'D', new MyRange('F', 'K')),
+                    new Country("Египет",   'D', new MyRange('A', 'E')),
+                    new Country("Марокко",  'D', new MyRange('F', 'K')),
                 }
            ),
            new GeoLocation(
