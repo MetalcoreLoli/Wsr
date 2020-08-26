@@ -55,26 +55,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\ImageHelper.cs" />
+    <Compile Include="Core\StringHelper.cs" />
     <Compile Include="DomainLogic\AuthorizantionController.cs" />
-    <Compile Include="Forms\AuthonrizationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AuthonrizationForm.Designer.cs">
-      <DependentUpon>AuthonrizationForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DomainLogic\DriverCreatingController.cs" />
     <Compile Include="Enities\Address.cs" />
     <Compile Include="Enities\Code.cs" />
     <Compile Include="Enities\Company.cs" />
     <Compile Include="Enities\Driver.cs" />
     <Compile Include="Enities\Employee.cs" />
-    <Compile Include="Enities\EnitityContext.cs" />
+    <Compile Include="Enities\EntityContext.cs" />
     <Compile Include="Enities\Job.cs" />
     <Compile Include="Enities\Passport.cs" />
     <Compile Include="Enities\Person.cs" />
     <Compile Include="Enities\Region.cs" />
     <Compile Include="Enities\RegionNameEn.cs" />
     <Compile Include="Enities\Street.cs" />
+    <Compile Include="Forms\AuthonrizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthonrizationForm.Designer.cs">
+      <DependentUpon>AuthonrizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DriverCreatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DriverCreatingForm.Designer.cs">
+      <DependentUpon>DriverCreatingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddressModel.cs" />
+    <Compile Include="Models\CompanyModel.cs" />
     <Compile Include="Models\DriverModel.cs" />
+    <Compile Include="Models\JobModel.cs" />
+    <Compile Include="Models\PassportModel.cs" />
+    <Compile Include="Models\StreetModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,6 +96,9 @@
     <Compile Include="Services\StandartDialogService.cs" />
     <EmbeddedResource Include="Forms\AuthonrizationForm.resx">
       <DependentUpon>AuthonrizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DriverCreatingForm.resx">
+      <DependentUpon>DriverCreatingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

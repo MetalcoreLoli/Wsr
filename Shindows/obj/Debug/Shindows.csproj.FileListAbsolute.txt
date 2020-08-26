@@ -18,3 +18,4 @@ C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.csproj.CoreC
 C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.csproj.CopyComplete
 C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.exe
 C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.pdb
+C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.Forms.DriverCreatingForm.resources

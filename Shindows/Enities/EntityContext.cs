@@ -5,10 +5,10 @@ namespace Shindows.Enities
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class EnitityContext : DbContext
+    public partial class EntityContext : DbContext
     {
-        public EnitityContext()
-            : base("name=EnitityContext")
+        public EntityContext()
+            : base("name=EntityContext")
         {
         }
 
@@ -36,11 +36,6 @@ namespace Shindows.Enities
                 .WithRequired(e => e.Job)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Passport>()
-                .HasMany(e => e.Driver)
-                .WithRequired(e => e.Passport)
-                .HasForeignKey(e => e.PersonId);
-
             modelBuilder.Entity<Person>()
                 .Property(e => e.Photo)
                 .IsFixedLength();
@@ -48,6 +43,11 @@ namespace Shindows.Enities
             modelBuilder.Entity<Person>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Person>()
+                .HasMany(e => e.Driver)
+                .WithRequired(e => e.Person)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Region>()
                 .HasMany(e => e.Code)

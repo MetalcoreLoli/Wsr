@@ -1,6 +1,8 @@
 ﻿using Shindows.Enities;
+using Shindows.Forms;
 using Shindows.Models;
 using Shindows.Services;
+using System;
 using System.Data.Entity;
 using System.Threading.Tasks;
 
@@ -28,7 +30,7 @@ namespace Shindows.DomainLogic
             if (user == null)
                 throw new System.ArgumentNullException(nameof(user));
 
-            using (var context = new EnitityContext())
+            using (var context = new EntityContext())
                 return await context.Employee.FirstOrDefaultAsync(emp => emp.Login.Equals(user.Login) && emp.Password.Equals(user.Password)) != null;
         }
     }

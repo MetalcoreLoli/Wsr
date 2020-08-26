@@ -21,6 +21,6 @@ namespace Shindows.Enities
 
         public virtual Job Job { get; set; }
 
-        public virtual Passport Passport { get; set; }
+        public virtual Person Person { get; set; }
     }
 }

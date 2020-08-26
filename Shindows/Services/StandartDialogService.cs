@@ -9,6 +9,18 @@ namespace Shindows.Services
 {
     class StandartDialogService : IDialogService
     {
+        public bool OpenFileDiolog(out string fileName)
+        {
+            var ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                fileName = ofd.FileName;
+                return true;
+            }
+            fileName = string.Empty;
+            return false;
+        }
+
         public DialogResult ShowErrorMessage(string title, string message)
         {
             return MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);

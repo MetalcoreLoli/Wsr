@@ -1,4 +1,5 @@
 ﻿using Shindows.DomainLogic;
+using Shindows.Forms;
 using Shindows.Models;
 using Shindows.Services;
 using System;
@@ -29,11 +30,17 @@ namespace Shindows
                 UserModel user = new UserModel(LoginBox.Text, PasswordBox.Text);
                 if (!await _controller.CheckUserAsync(user))
                     throw new System.Exception("Неправильный логин или пароль!!!!");
+                new DriverCreatingForm().ShowDialog();
+
             }
             catch (Exception ex)
             {
                 _controller.Dialog.ShowErrorMessage("Error", ex.Message);
             }
+        }
+
+        private void LogInButton_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -12,7 +12,6 @@ namespace Shindows.Enities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Passport()
         {
-            Driver = new HashSet<Driver>();
             Person = new HashSet<Person>();
         }
 
@@ -21,9 +20,6 @@ namespace Shindows.Enities
         public int Serial { get; set; }
 
         public int Number { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Driver> Driver { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Person> Person { get; set; }

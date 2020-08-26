@@ -12,6 +12,7 @@ namespace Shindows.Enities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Person()
         {
+            Driver = new HashSet<Driver>();
             Employee = new HashSet<Employee>();
         }
 
@@ -48,6 +49,9 @@ namespace Shindows.Enities
         public string Description { get; set; }
 
         public virtual Address Address { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Driver> Driver { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employee> Employee { get; set; }
