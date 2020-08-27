@@ -9,7 +9,7 @@ namespace Shindows.Services
 {
     class StandartDialogService : IDialogService
     {
-        public bool OpenFileDiolog(out string fileName)
+        public bool OpenFileDialog(out string fileName)
         {
             var ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)

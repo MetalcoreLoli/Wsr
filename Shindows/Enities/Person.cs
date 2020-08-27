@@ -42,7 +42,7 @@ namespace Shindows.Enities
         [StringLength(255)]
         public string Email { get; set; }
 
-        [MaxLength(1)]
+        [Column(TypeName = "image")]
         public byte[] Photo { get; set; }
 
         [Column(TypeName = "text")]

@@ -19,3 +19,4 @@ C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.csproj.CopyC
 C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.exe
 C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.pdb
 C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.Forms.DriverCreatingForm.resources
+C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.Forms.LicenceForm.resources

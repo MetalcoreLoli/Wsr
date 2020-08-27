@@ -1,16 +1,9 @@
-﻿using Shindows.Core;
+﻿using Shindows.Builders;
 using Shindows.DomainLogic;
 using Shindows.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shindows.Forms
@@ -45,29 +38,31 @@ namespace Shindows.Forms
         {
             try
             {
-                Models.DriverModel driver = new Models.DriverModel
-                {
-                    Name = NameBox.Text.IfNullThrowException(),
-                    MiddleName = NameBox.Text.IfNullThrowException(),
-                    LastName = NameBox.Text.IfNullThrowException(),
-                    Passport = new Models.PassportModel(0, int.Parse(PassportSerialBox.Text), int.Parse(PassportNumberBox.Text)),
-                    Address = new Models.AddressModel(
-                        0, 
-                        new Models.StreetModel (0, StreetBox.Text.IfNullThrowException()),
-                        HouseNumberBox.Text.IfNullThrowException(),
-                        PostcodeBox.Text.IfNullThrowException()
-                        ),
-                    Company = new Models.CompanyModel(0, CompanyBox.Text.IfNullThrowException()),
-                    Job = new Models.JobModel(0, JobBox.Text.IfNullThrowException()),
-                    Email = EmailBox.Text.IfNullThrowException(),
-                    Phone = PhoneBox.Text.IfNullThrowException(),
-                    Description = DesriptionBox.Text
-                };
+                Models.DriverModel driver = null;
 
-                //if (DiverPhotoBox.Image == null)
-                //    throw new Exception("Please upload driver photo !!!");
+                DriverModelBuilder driverBuilder = new DriverModelBuilder();
 
-                //driver.Image = DiverPhotoBox.Image.ImageToByties();
+                driverBuilder.SetId(0);
+
+                driverBuilder.SetAddress(0, 0, StreetBox.Text, HouseNumberBox.Text, PostcodeBox.Text);
+                driverBuilder.SetCompany(0, CompanyBox.Text);
+                driverBuilder.SetJob(0, JobBox.Text);
+                driverBuilder.SetPassport(0, int.Parse(PassportSerialBox.Text), int.Parse(PassportNumberBox.Text));
+
+                driverBuilder.SetName(NameBox.Text);
+                driverBuilder.SetMiddleName(MIddleNameBox.Text);
+                driverBuilder.SetLastName(LastNameBox.Text);
+
+                driverBuilder.SetDescription(DesriptionBox.Text);
+                driverBuilder.SetEmail(EmailBox.Text);
+                driverBuilder.SetPhone(PhoneBox.Text);
+
+                if (DriverPhotoBox.Image == null)
+                    throw new Exception("Please upload driver photo !!!");
+
+                driverBuilder.SetImage(DriverPhotoBox.Image);
+
+                driver = driverBuilder.GetDriverModel();
                 _controller.Insert(driver);
             }
             catch (Exception ex)
@@ -80,13 +75,14 @@ namespace Shindows.Forms
         {
             try
             {
-                string pictureName = "";
-                if (_controller.DialogService.OpenFileDiolog(out pictureName)) 
+                if (_controller.DialogService.OpenFileDialog(out string pictureName))
                 {
                     var pic = new Bitmap(pictureName);
+                    
                     if (pic.Width > 512 && pic.Height > 512)
-                        throw new Exception("Picture must be 3x4");
-                    DiverPhotoBox.Image = pic;
+                        throw new Exception("The picture must be 3x4");
+
+                    DriverPhotoBox.Image = pic;
                 }
             }
             catch (Exception ex)

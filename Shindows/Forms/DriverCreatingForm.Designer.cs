@@ -64,10 +64,10 @@
             this.PassportSerialBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.DiverPhotoBox = new System.Windows.Forms.PictureBox();
+            this.DriverPhotoBox = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DiverPhotoBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DriverPhotoBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -93,6 +93,7 @@
             this.MIddleNameBox.Name = "MIddleNameBox";
             this.MIddleNameBox.Size = new System.Drawing.Size(148, 20);
             this.MIddleNameBox.TabIndex = 3;
+            this.MIddleNameBox.Text = "test";
             // 
             // label2
             // 
@@ -109,6 +110,7 @@
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(148, 20);
             this.NameBox.TabIndex = 5;
+            this.NameBox.Text = "test";
             // 
             // label3
             // 
@@ -148,6 +150,7 @@
             this.PostcodeBox.Name = "PostcodeBox";
             this.PostcodeBox.Size = new System.Drawing.Size(142, 20);
             this.PostcodeBox.TabIndex = 13;
+            this.PostcodeBox.Text = "test";
             // 
             // label7
             // 
@@ -164,6 +167,7 @@
             this.HouseNumberBox.Name = "HouseNumberBox";
             this.HouseNumberBox.Size = new System.Drawing.Size(142, 20);
             this.HouseNumberBox.TabIndex = 11;
+            this.HouseNumberBox.Text = "test";
             // 
             // label6
             // 
@@ -198,6 +202,7 @@
             this.LastNameBox.Name = "LastNameBox";
             this.LastNameBox.Size = new System.Drawing.Size(148, 20);
             this.LastNameBox.TabIndex = 7;
+            this.LastNameBox.Text = "test";
             // 
             // EmailBox
             // 
@@ -205,6 +210,7 @@
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(194, 20);
             this.EmailBox.TabIndex = 10;
+            this.EmailBox.Text = "test@test.test";
             // 
             // label8
             // 
@@ -295,6 +301,7 @@
             this.PhoneBox.Name = "PhoneBox";
             this.PhoneBox.Size = new System.Drawing.Size(194, 20);
             this.PhoneBox.TabIndex = 20;
+            this.PhoneBox.Text = "1111111111";
             // 
             // CompanyBox
             // 
@@ -349,6 +356,7 @@
             this.PassportNumberBox.Name = "PassportNumberBox";
             this.PassportNumberBox.Size = new System.Drawing.Size(142, 20);
             this.PassportNumberBox.TabIndex = 13;
+            this.PassportNumberBox.Text = "12345678";
             // 
             // label13
             // 
@@ -365,6 +373,7 @@
             this.PassportSerialBox.Name = "PassportSerialBox";
             this.PassportSerialBox.Size = new System.Drawing.Size(142, 20);
             this.PassportSerialBox.TabIndex = 11;
+            this.PassportSerialBox.Text = "1234";
             // 
             // label15
             // 
@@ -379,21 +388,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // DiverPhotoBox
+            // DriverPhotoBox
             // 
-            this.DiverPhotoBox.Location = new System.Drawing.Point(415, 34);
-            this.DiverPhotoBox.Name = "DiverPhotoBox";
-            this.DiverPhotoBox.Size = new System.Drawing.Size(143, 191);
-            this.DiverPhotoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.DiverPhotoBox.TabIndex = 26;
-            this.DiverPhotoBox.TabStop = false;
+            this.DriverPhotoBox.Location = new System.Drawing.Point(415, 34);
+            this.DriverPhotoBox.Name = "DriverPhotoBox";
+            this.DriverPhotoBox.Size = new System.Drawing.Size(143, 191);
+            this.DriverPhotoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DriverPhotoBox.TabIndex = 26;
+            this.DriverPhotoBox.TabStop = false;
             // 
             // DriverCreatingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 564);
-            this.Controls.Add(this.DiverPhotoBox);
+            this.Controls.Add(this.DriverPhotoBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.JobBox);
             this.Controls.Add(this.label14);
@@ -427,7 +436,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DiverPhotoBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DriverPhotoBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,42 +444,42 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox IdBox;
-        private System.Windows.Forms.TextBox MIddleNameBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox NameBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox StreetBox;
-        private System.Windows.Forms.TextBox PostcodeBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox HouseNumberBox;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox LastNameBox;
-        private System.Windows.Forms.TextBox EmailBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox PathToImageBox;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox DesriptionBox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button DoneButton;
-        private System.Windows.Forms.Button BackButton;
-        private System.Windows.Forms.Button ImageLoadButton;
-        private System.Windows.Forms.MaskedTextBox PhoneBox;
-        private System.Windows.Forms.ComboBox CompanyBox;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox JobBox;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox PassportNumberBox;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox PassportSerialBox;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox DiverPhotoBox;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox IdBox;
+        public System.Windows.Forms.TextBox MIddleNameBox;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox NameBox;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.ComboBox StreetBox;
+        public System.Windows.Forms.TextBox PostcodeBox;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.TextBox HouseNumberBox;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox LastNameBox;
+        public System.Windows.Forms.TextBox EmailBox;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox PathToImageBox;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.TextBox DesriptionBox;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Button DoneButton;
+        public System.Windows.Forms.Button BackButton;
+        public System.Windows.Forms.Button ImageLoadButton;
+        public System.Windows.Forms.MaskedTextBox PhoneBox;
+        public System.Windows.Forms.ComboBox CompanyBox;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.ComboBox JobBox;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.TextBox PassportNumberBox;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox PassportSerialBox;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.OpenFileDialog openFileDialog1;
+        public System.Windows.Forms.PictureBox DriverPhotoBox;
     }
 }

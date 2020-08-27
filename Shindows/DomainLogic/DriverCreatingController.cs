@@ -58,7 +58,7 @@ namespace Shindows.DomainLogic
         public void Insert(DriverModel driver)
         {
             if (driver == null)
-                throw new System.ArgumentNullException(nameof(driver));
+                throw new System.ArgumentNullException(nameof (driver));
 
             try
             {
@@ -91,7 +91,6 @@ namespace Shindows.DomainLogic
                         });
                     context.SaveChanges();
 
-
                     var person = context.Person.Add(
                         new Person
                         {
@@ -100,11 +99,10 @@ namespace Shindows.DomainLogic
                             LastName = driver.LastName,
                             PassportId = passport.Id,
                             AddressId = address.Id,
-                            Email = driver.Email,
+                            Photo = driver.Image,
                             Phone = driver.Phone,
-                            //Photo = driver.Image,
+                            Email = driver.Email,
                             Description = driver.Description
-
                         });
                     context.SaveChanges();
 
@@ -141,6 +139,10 @@ namespace Shindows.DomainLogic
             catch (Exception ex)
             {
                 _dialog.ShowErrorMessage("ERROR", ex.Message);
+            }
+            finally 
+            {
+                DialogService.ShowMessage("Успех", "Водитель был добавлен");
             }
         }
     }
