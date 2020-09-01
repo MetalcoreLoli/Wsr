@@ -41,28 +41,30 @@ namespace Shindows.Forms
                 Models.DriverModel driver = null;
 
                 DriverModelBuilder driverBuilder = new DriverModelBuilder();
-
-                driverBuilder.SetId(0);
-
-                driverBuilder.SetAddress(0, 0, StreetBox.Text, HouseNumberBox.Text, PostcodeBox.Text);
-                driverBuilder.SetCompany(0, CompanyBox.Text);
-                driverBuilder.SetJob(0, JobBox.Text);
-                driverBuilder.SetPassport(0, int.Parse(PassportSerialBox.Text), int.Parse(PassportNumberBox.Text));
-
-                driverBuilder.SetName(NameBox.Text);
-                driverBuilder.SetMiddleName(MIddleNameBox.Text);
-                driverBuilder.SetLastName(LastNameBox.Text);
-
-                driverBuilder.SetDescription(DesriptionBox.Text);
-                driverBuilder.SetEmail(EmailBox.Text);
-                driverBuilder.SetPhone(PhoneBox.Text);
-
                 if (DriverPhotoBox.Image == null)
                     throw new Exception("Please upload driver photo !!!");
 
-                driverBuilder.SetImage(DriverPhotoBox.Image);
+                driver = driverBuilder
+                    .WithId(0)
+                    .WithName(NameBox.Text)
+                    .WithMiddleName(MIddleNameBox.Text)
+                    .WithLastName(LastNameBox.Text)
+                    .WithDescription(DesriptionBox.Text)
+                    .WithEmail(EmailBox.Text)
+                    .WithPhone(PhoneBox.Text)
+                    .WithImage(DriverPhotoBox.Image)
+                    .Lives
+                        .At(0, StreetBox.Text)
+                        .WithHouseNumber(HouseNumberBox.Text)
+                        .WithPostcode(PostcodeBox.Text)
+                    .Works
+                        .At(0, CompanyBox.Text)
+                        .AsA(0, JobBox.Text)
+                    .Passport
+                        .WithSerial(int.Parse(PassportSerialBox.Text))
+                        .WithNumber(int.Parse(PassportNumberBox.Text))
+                    .Build();
 
-                driver = driverBuilder.GetDriverModel();
                 _controller.Insert(driver);
             }
             catch (Exception ex)

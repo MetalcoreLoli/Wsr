@@ -12,6 +12,7 @@ namespace Shindows.Models
         public int Id                           { get; set; }
         public int Serial                       { get; set; }
         public int Number                       { get; set; }
+        public string Status                    { get; set; }
         public DateTime Date                    { get; set; }
         public DateTime ExpireDate              { get; set; }
         public virtual DriverModel Driver       { get; set; }
@@ -35,7 +36,9 @@ namespace Shindows.Models
                 Number = licence.Number,
                 Date = licence.Date,
                 ExpireDate = licence.ExpireDate,
-                Categories = cats
+                Categories = cats,
+                Driver = DriverModel.CreateFrom(licence.Driver),
+                Status = licence.LicenceWithStatus.FirstOrDefault(status => status.LicenceId == licence.Id).LicenceStatus.Value
             };
         }
     }

@@ -1,12 +1,11 @@
-﻿using Shindows.Enities;
+﻿using Shindows.Core;
+using Shindows.Enities;
 using Shindows.Models;
 using Shindows.Services;
 using System;
 using System.Collections.Generic;
-using System.Drawing.Printing;
+using System.Data.Entity;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Shindows.DomainLogic
@@ -24,35 +23,38 @@ namespace Shindows.DomainLogic
         {
             try
             {
-                using (var context = new EntityContext())
-                {
-                    /*
-                     	@driverId       int,
-	                    @serail         int,
-	                    @number         int,
-	                    @date           date,
-	                    @expitreDate    date,
-	                    @category       nvarchar (255)
-                     */
+                var context = EntityContextSingleton.Instance;
 
-                    context.Database.ExecuteSqlCommand(
-                        $"exec [AddLicence] @driverId='{model.Driver.Id}'," +
-                                          $"@serail='{model.Serial}'," +
-                                          $"@nubmer='{model.Number}'," +
-                                          $"@date='{model.Date}'," +
-                                          $"@category='{model.Categories.First().Value}'");
-                    
-                    if (model.Categories.Count > 1) 
+                /*
+                    @driverId       int,
+                    @serail         int,
+                    @number         int,
+                    @date           date,
+                    @expitreDate    date,
+                    @category       nvarchar (255)
+                 */
+
+                context.Database.ExecuteSqlCommand (
+                    $"exec [AddLicence] @driverId='{model.Driver.Id}'," +
+                                      $"@serail='{model.Serial}'," +
+                                      $"@number='{model.Number}'," +
+                                      $"@date='{model.Date}'," +
+                                      $"@expitreDate='{model.ExpireDate}'," +
+                                      $"@category='{model.Categories.First().Value}'");
+
+                if (model.Categories.Count > 1)
+                {
+                    foreach (var category in model.Categories)
                     {
-                        foreach (var category in model.Categories)
-                        {
-                            /*
-                             	@licenceId  int,
-	                            @categoryId int
-                             */
-                            context.Database.ExecuteSqlCommand(
-                                $"exec [AddCategoryToLicence] @licenceId='{model.Id}', @categoryId='{category.Id}'");
-                        }
+                        /*
+                            @licenceId  int,
+                            @categoryId int
+                         */
+                        int id = context.Database.SqlQuery<Category> (
+                            $"select [Id] from [Category] where [Category].[Value] = '{category.Value}'").First().Id;
+                        
+                        context.Database.ExecuteSqlCommand (
+                            $"exec [AddCategoryToLicence] @licenceId='{model.Id}', @categoryId='{id}'");
                     }
                 }
             }
@@ -60,7 +62,31 @@ namespace Shindows.DomainLogic
             {
                 DialogService.ShowErrorMessage("ERROR", ex.Message);
             }
+            finally
+            {
+                DialogService.ShowMessage("Done", "ВУ было зарегистрированно");
+            }
         }
 
+        public async Task<int> GetLastLicenceSerialAsync()
+        {
+            var context = EntityContextSingleton.Instance;
+            await context.Licence.LoadAsync().ConfigureAwait(false);
+            return context.Licence.Local.Last().Serial;
+        }
+
+        public async Task<int> GetLastLicenceNumberAsync()
+        {
+            var context = EntityContextSingleton.Instance;
+            await context.Licence.LoadAsync().ConfigureAwait(false);
+            return context.Licence.Local.Last().Number;
+        }
+
+        public IEnumerable<string> GetCategories()
+        {
+            var context = EntityContextSingleton.Instance;
+            return from item in context.Category.Select(cat => cat.Value).Distinct()
+                   select item;
+        }
     }
 }

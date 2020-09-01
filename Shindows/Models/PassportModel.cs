@@ -8,6 +8,10 @@ namespace Shindows.Models
 {
     public class PassportModel
     {
+        public PassportModel()
+        {
+        }
+
         public PassportModel(int id, int serial, int number)
         {
             Id = id;

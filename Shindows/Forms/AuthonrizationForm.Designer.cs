@@ -61,6 +61,7 @@
             this.LoginBox.Name = "LoginBox";
             this.LoginBox.Size = new System.Drawing.Size(145, 20);
             this.LoginBox.TabIndex = 2;
+            this.LoginBox.Text = "inspector";
             // 
             // PasswordBox
             // 
@@ -69,6 +70,7 @@
             this.PasswordBox.PasswordChar = '*';
             this.PasswordBox.Size = new System.Drawing.Size(145, 20);
             this.PasswordBox.TabIndex = 3;
+            this.PasswordBox.Text = "inspector";
             // 
             // label1
             // 

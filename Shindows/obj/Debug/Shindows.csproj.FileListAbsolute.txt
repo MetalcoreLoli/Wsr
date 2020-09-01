@@ -20,3 +20,7 @@ C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.exe
 C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.pdb
 C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.Forms.DriverCreatingForm.resources
 C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.Forms.LicenceForm.resources
+C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.Forms.MenuForm.resources
+C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.Forms.DriversListForm.resources
+C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.Forms.LicenceListForm.resources
+C:\Users\Magical.Cake\source\repos\Libs\Shindows\obj\Debug\Shindows.Forms.CarForm.resources

@@ -36,6 +36,7 @@ namespace Shindows.Models
                 Name        = driver.Person.Name,
                 MiddleName  = driver.Person.MiddleName,
                 LastName    = driver.Person.LastName,
+                Phone       = driver.Person.Phone,
                 Job         = new JobModel(driver.JobId, driver.Job.Name),
                 Company     = new CompanyModel(driver.CompanyId, driver.Company.Name),
                 Passport    = new PassportModel(
@@ -55,5 +56,7 @@ namespace Shindows.Models
                 Description = driver.Person.Description
             };
         }
+
+        public static implicit operator DriverModel(Driver driver) => DriverModel.CreateFrom(driver);
     }
 }

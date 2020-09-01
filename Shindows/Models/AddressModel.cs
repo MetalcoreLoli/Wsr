@@ -8,6 +8,10 @@ namespace Shindows.Models
 {
     public class AddressModel
     {
+        public AddressModel()
+        {
+        }
+
         public AddressModel(int id, StreetModel street, string houseNumber, string postCode)
         {
             Id = id;

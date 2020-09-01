@@ -19,6 +19,12 @@ namespace Shindows.Enities
 
         public int Value { get; set; }
 
+        [Required]
+        [StringLength(255)]
+        public string Code { get; set; }
+
+        public bool IsMettalic { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Car> Car { get; set; }
     }

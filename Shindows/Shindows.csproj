@@ -55,12 +55,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builders\DriverModelBuilder.cs" />
+    <Compile Include="DomainLogic\Builders\CarModelBuilder.cs" />
+    <Compile Include="Models\EngineModel.cs" />
+    <Compile Include="Models\ManufaturerModel.cs" />
+    <Compile Include="DomainLogic\Singletons\EntityContextSingleton.cs" />
+    <Compile Include="DomainLogic\Builders\DriverModelBuilder.cs" />
     <Compile Include="Core\ImageHelper.cs" />
     <Compile Include="Core\StringHelper.cs" />
     <Compile Include="DomainLogic\AuthorizantionController.cs" />
     <Compile Include="DomainLogic\DriverCreatingController.cs" />
+    <Compile Include="DomainLogic\DriverListFormController.cs" />
+    <Compile Include="DomainLogic\Fillters\DriverFillter.cs" />
+    <Compile Include="DomainLogic\Fillters\IFillter.cs" />
+    <Compile Include="DomainLogic\Fillters\LicenceFillter.cs" />
     <Compile Include="DomainLogic\LicenceController.cs" />
+    <Compile Include="DomainLogic\LicenceListFormController.cs" />
+    <Compile Include="DomainLogic\MenuFormController.cs" />
+    <Compile Include="DomainLogic\Specifications\AndSpecification.cs" />
+    <Compile Include="DomainLogic\Specifications\Driver\DriverLastNameSpecification.cs" />
+    <Compile Include="DomainLogic\Specifications\Driver\DriverNameSpecification.cs" />
+    <Compile Include="DomainLogic\Specifications\Licence\LicenceLastNameSpecification.cs" />
+    <Compile Include="DomainLogic\Specifications\Licence\LicenceMiddleNameSpecification.cs" />
+    <Compile Include="DomainLogic\Specifications\Licence\LicenceNameSpecification.cs" />
+    <Compile Include="DomainLogic\Specifications\Licence\LicenceStatusSpecification.cs" />
+    <Compile Include="DomainLogic\Specifications\Driver\MiddleNameSpecification.cs" />
+    <Compile Include="DomainLogic\Specifications\OrSpecification.cs" />
+    <Compile Include="DomainLogic\Specifications\Specification.cs" />
     <Compile Include="Enities\Address.cs" />
     <Compile Include="Enities\Car.cs" />
     <Compile Include="Enities\Category.cs" />
@@ -70,6 +90,7 @@
     <Compile Include="Enities\Driver.cs" />
     <Compile Include="Enities\Employee.cs" />
     <Compile Include="Enities\EngineType.cs" />
+    <Compile Include="Enities\EngineTypeEn.cs" />
     <Compile Include="Enities\EntityContext.cs" />
     <Compile Include="Enities\Job.cs" />
     <Compile Include="Enities\Licence.cs" />
@@ -90,11 +111,23 @@
     <Compile Include="Forms\AuthonrizationForm.Designer.cs">
       <DependentUpon>AuthonrizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarForm.Designer.cs">
+      <DependentUpon>CarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DriverCreatingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\DriverCreatingForm.Designer.cs">
       <DependentUpon>DriverCreatingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DriversListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DriversListForm.Designer.cs">
+      <DependentUpon>DriversListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LicenceForm.cs">
       <SubType>Form</SubType>
@@ -102,12 +135,28 @@
     <Compile Include="Forms\LicenceForm.Designer.cs">
       <DependentUpon>LicenceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LicenceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LicenceListForm.Designer.cs">
+      <DependentUpon>LicenceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\AddressModel.cs" />
+    <Compile Include="Models\CarModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\ColorModel.cs" />
     <Compile Include="Models\CompanyModel.cs" />
     <Compile Include="Models\DriverModel.cs" />
+    <Compile Include="Models\DriveTypeModel.cs" />
     <Compile Include="Models\JobModel.cs" />
     <Compile Include="Models\LicenceModel.cs" />
+    <Compile Include="Models\ModelModel.cs" />
     <Compile Include="Models\PassportModel.cs" />
     <Compile Include="Models\StreetModel.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -118,11 +167,23 @@
     <EmbeddedResource Include="Forms\AuthonrizationForm.resx">
       <DependentUpon>AuthonrizationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarForm.resx">
+      <DependentUpon>CarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DriverCreatingForm.resx">
       <DependentUpon>DriverCreatingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DriversListForm.resx">
+      <DependentUpon>DriversListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LicenceForm.resx">
       <DependentUpon>LicenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LicenceListForm.resx">
+      <DependentUpon>LicenceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -132,6 +193,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -156,6 +218,9 @@
       <Project>{1fff5ab9-d345-4cc6-93f6-22d0b9ea98d7}</Project>
       <Name>REG_LIB_MARK</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\driver_license_template.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

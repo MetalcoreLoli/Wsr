@@ -21,6 +21,7 @@ namespace Shindows.Enities
         public virtual DbSet<Driver> Driver { get; set; }
         public virtual DbSet<Employee> Employee { get; set; }
         public virtual DbSet<EngineType> EngineType { get; set; }
+        public virtual DbSet<EngineTypeEn> EngineTypeEn { get; set; }
         public virtual DbSet<Job> Job { get; set; }
         public virtual DbSet<Licence> Licence { get; set; }
         public virtual DbSet<LicenceStatus> LicenceStatus { get; set; }
@@ -60,6 +61,12 @@ namespace Shindows.Enities
             modelBuilder.Entity<Driver>()
                 .HasMany(e => e.Licence)
                 .WithRequired(e => e.Driver)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<EngineType>()
+                .HasMany(e => e.EngineTypeEn)
+                .WithRequired(e => e.EngineType)
+                .HasForeignKey(e => e.EngineTypeRusId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<EngineType>()

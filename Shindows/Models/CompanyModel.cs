@@ -8,6 +8,10 @@ namespace Shindows.Models
 {
     public class CompanyModel
     {
+        public CompanyModel()
+        {
+        }
+
         public CompanyModel(int id, string name)
         {
             Id = id;
