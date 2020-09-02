@@ -104,5 +104,34 @@ namespace Shindows.Core
             return from cat in context.Model
                    select cat.Name;
         }
+
+        public static IEnumerable<string> GetEngines()
+        {
+            var context = Instance;
+            return from engine in context.EngineType
+                   select engine.Type;
+        }
+
+
+        public static Model FindModelOrDefault(Func<Model, bool> predicate) 
+            => Instance.Model.FirstOrDefault(predicate);
+
+        public static Color FindColorOrDefault(Func<Color, bool> predicate)
+            => Instance.Color.FirstOrDefault(predicate);
+
+        public static TypeOfDrive FindTypeOfDriveOrDefault(Func<TypeOfDrive, bool> predicate)
+           => Instance.TypeOfDrive.FirstOrDefault(predicate);
+
+        public static Manufaturer FindManufaturerOrDefault(Func<Manufaturer, bool> predicate)
+           => Instance.Manufaturer.FirstOrDefault(predicate);
+
+        public static EngineType FindManufaturerOrDefault(Func<EngineType, bool> predicate)
+           => Instance.EngineType.FirstOrDefault(predicate);
+
+
+        public static Driver FindDriverOrDefault(string name, string middleName, string lastName) 
+            => Instance.Driver.FirstOrDefault(dr =>     dr.Person.Name.Equals(name) 
+                                                    &&  dr.Person.MiddleName.Equals(middleName)
+                                                    &&  dr.Person.LastName.Equals(lastName));
     }
 }

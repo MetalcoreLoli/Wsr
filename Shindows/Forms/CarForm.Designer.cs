@@ -56,6 +56,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.EngineNumberBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.VINBox = new System.Windows.Forms.TextBox();
             this.ManufacturerBox = new System.Windows.Forms.ComboBox();
             this.Lable = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -63,13 +65,12 @@
             this.label17 = new System.Windows.Forms.Label();
             this.WeightBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.CarYearBox = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.CategoryBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.VINBox = new System.Windows.Forms.TextBox();
+            this.AddButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -273,6 +274,7 @@
             this.PowerInHourseForcesBox.Name = "PowerInHourseForcesBox";
             this.PowerInHourseForcesBox.Size = new System.Drawing.Size(205, 26);
             this.PowerInHourseForcesBox.TabIndex = 46;
+            this.PowerInHourseForcesBox.Text = "311231";
             // 
             // label15
             // 
@@ -290,6 +292,7 @@
             this.PowerInKVtBox.Name = "PowerInKVtBox";
             this.PowerInKVtBox.Size = new System.Drawing.Size(205, 26);
             this.PowerInKVtBox.TabIndex = 44;
+            this.PowerInKVtBox.Text = "312312";
             // 
             // label10
             // 
@@ -324,6 +327,7 @@
             this.EngineModelBox.Name = "EngineModelBox";
             this.EngineModelBox.Size = new System.Drawing.Size(205, 26);
             this.EngineModelBox.TabIndex = 40;
+            this.EngineModelBox.Text = "12312";
             // 
             // label8
             // 
@@ -341,6 +345,7 @@
             this.EngineNumberBox.Name = "EngineNumberBox";
             this.EngineNumberBox.Size = new System.Drawing.Size(205, 26);
             this.EngineNumberBox.TabIndex = 38;
+            this.EngineNumberBox.Text = "31312";
             // 
             // groupBox3
             // 
@@ -358,7 +363,7 @@
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.ModelBox);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.CarYearBox);
             this.groupBox3.Controls.Add(this.ColorBox);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.textBox2);
@@ -371,6 +376,24 @@
             this.groupBox3.TabIndex = 44;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Транспорт";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label12.Location = new System.Drawing.Point(179, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(36, 20);
+            this.label12.TabIndex = 51;
+            this.label12.Text = "VIN";
+            // 
+            // VINBox
+            // 
+            this.VINBox.Location = new System.Drawing.Point(176, 53);
+            this.VINBox.Name = "VINBox";
+            this.VINBox.Size = new System.Drawing.Size(164, 26);
+            this.VINBox.TabIndex = 50;
+            this.VINBox.Text = "JHMCM56557C404453";
             // 
             // ManufacturerBox
             // 
@@ -407,6 +430,7 @@
             this.WeightKgBox.Name = "WeightKgBox";
             this.WeightKgBox.Size = new System.Drawing.Size(164, 26);
             this.WeightKgBox.TabIndex = 46;
+            this.WeightKgBox.Text = "312312";
             // 
             // label17
             // 
@@ -424,6 +448,7 @@
             this.WeightBox.Name = "WeightBox";
             this.WeightBox.Size = new System.Drawing.Size(164, 26);
             this.WeightBox.TabIndex = 44;
+            this.WeightBox.Text = "3123123";
             // 
             // label11
             // 
@@ -435,12 +460,12 @@
             this.label11.TabIndex = 43;
             this.label11.Text = "Год";
             // 
-            // dateTimePicker1
+            // CarYearBox
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 236);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(164, 26);
-            this.dateTimePicker1.TabIndex = 42;
+            this.CarYearBox.Location = new System.Drawing.Point(6, 236);
+            this.CarYearBox.Name = "CarYearBox";
+            this.CarYearBox.Size = new System.Drawing.Size(164, 26);
+            this.CarYearBox.TabIndex = 42;
             // 
             // label13
             // 
@@ -458,6 +483,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(164, 26);
             this.textBox2.TabIndex = 38;
+            this.textBox2.Text = "13123";
             // 
             // CategoryBox
             // 
@@ -478,28 +504,23 @@
             this.label14.TabIndex = 36;
             this.label14.Text = "Категория";
             // 
-            // label12
+            // AddButton
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label12.Location = new System.Drawing.Point(179, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 20);
-            this.label12.TabIndex = 51;
-            this.label12.Text = "VIN";
-            // 
-            // VINBox
-            // 
-            this.VINBox.Location = new System.Drawing.Point(176, 53);
-            this.VINBox.Name = "VINBox";
-            this.VINBox.Size = new System.Drawing.Size(164, 26);
-            this.VINBox.TabIndex = 50;
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.AddButton.Location = new System.Drawing.Point(198, 721);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(201, 30);
+            this.AddButton.TabIndex = 28;
+            this.AddButton.Text = "Добавить";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // CarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 727);
+            this.ClientSize = new System.Drawing.Size(650, 776);
+            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -544,7 +565,7 @@
         private System.Windows.Forms.TextBox EngineModelBox;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker CarYearBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox CategoryBox;
@@ -561,5 +582,6 @@
         private System.Windows.Forms.Label Lable;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox VINBox;
+        private System.Windows.Forms.Button AddButton;
     }
 }

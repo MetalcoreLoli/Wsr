@@ -56,21 +56,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainLogic\Builders\CarModelBuilder.cs" />
+    <Compile Include="DomainLogic\Controllers\CarFormContoroller.cs" />
     <Compile Include="Models\EngineModel.cs" />
     <Compile Include="Models\ManufaturerModel.cs" />
     <Compile Include="DomainLogic\Singletons\EntityContextSingleton.cs" />
     <Compile Include="DomainLogic\Builders\DriverModelBuilder.cs" />
     <Compile Include="Core\ImageHelper.cs" />
     <Compile Include="Core\StringHelper.cs" />
-    <Compile Include="DomainLogic\AuthorizantionController.cs" />
-    <Compile Include="DomainLogic\DriverCreatingController.cs" />
-    <Compile Include="DomainLogic\DriverListFormController.cs" />
+    <Compile Include="DomainLogic\Controllers\AuthorizantionController.cs" />
+    <Compile Include="DomainLogic\Controllers\DriverCreatingController.cs" />
+    <Compile Include="DomainLogic\Controllers\DriverListFormController.cs" />
     <Compile Include="DomainLogic\Fillters\DriverFillter.cs" />
     <Compile Include="DomainLogic\Fillters\IFillter.cs" />
     <Compile Include="DomainLogic\Fillters\LicenceFillter.cs" />
-    <Compile Include="DomainLogic\LicenceController.cs" />
-    <Compile Include="DomainLogic\LicenceListFormController.cs" />
-    <Compile Include="DomainLogic\MenuFormController.cs" />
+    <Compile Include="DomainLogic\Controllers\LicenceController.cs" />
+    <Compile Include="DomainLogic\Controllers\LicenceListFormController.cs" />
+    <Compile Include="DomainLogic\Controllers\MenuFormController.cs" />
     <Compile Include="DomainLogic\Specifications\AndSpecification.cs" />
     <Compile Include="DomainLogic\Specifications\Driver\DriverLastNameSpecification.cs" />
     <Compile Include="DomainLogic\Specifications\Driver\DriverNameSpecification.cs" />
